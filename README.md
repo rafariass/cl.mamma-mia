@@ -111,37 +111,38 @@ npm run lint:css    # Lint CSS con Stylelint
 ## 📂 Estructura de Carpetas
 
 ```
-|-------------------------------------------------------------------------------------------------------|
-| Carpeta                  | Descripción                                                                |
-|-------------------------------------------------------------------------------------------------------|
-| cl.mamma-mia             | Carpeta raíz del proyecto                                                  |
-| ├── public               | Contiene archivos estáticos como index.html, imágenes, etc.                |
-| └── src                  |                                                                            |
-|     ├── assets           | Recursos estáticos como imágenes, fuentes, etc.                            |
-|     │   └── img          | Imágenes utilizadas en el proyecto.                                        |
-|     ├── components       | Componentes reutilizables de la UI (botones, formularios, etc.)            |
-|     ├── contexts         | Contextos de React para manejo de estado global.                           |
-|     ├── layouts          | Plantillas de diseño para diferentes secciones.                            |
-|     │   ├── private      | Diseño para páginas privadas (requiere autenticación).                     |
-|     │   └── public       | Diseño para páginas públicas.                                              |
-|     │       └── auth     | Vistas de autenticación (login, registro, etc.).                           |
-|     ├── routes           | Definición de rutas para las diferentes páginas.                           |
-|     └── utils            | Funciones y utilidades reutilizables (validaciones, formateadores, etc.)   |
-|-------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------|
+| Carpeta                  | Descripción                                                              |
+|-----------------------------------------------------------------------------------------------------|
+| cl.mamma-mia             | Carpeta raíz del proyecto                                                |
+| ├── public               | Contiene archivos estáticos como index.html, imágenes, etc.              |
+| └── src                  |                                                                          |
+|     ├── assets           | Recursos estáticos como imágenes, fuentes, etc.                          |
+|     │   └── img          | Imágenes utilizadas en el proyecto.                                      |
+|     ├── components       | Componentes reutilizables de la UI (botones, formularios, etc.)          |
+|     ├── contexts         | Contextos de React para manejo de estado global.                         |
+|     ├── layouts          | Plantillas de diseño para diferentes secciones.                          |
+|     │   ├── private      | Diseño para páginas privadas (requiere autenticación).                   |
+|     │   └── public       | Diseño para páginas públicas.                                            |
+|     │       └── auth     | Vistas de autenticación (login, registro, etc.).                         |
+|     ├── routes           | Definición de rutas para las diferentes páginas.                         |
+|     └── utils            | Funciones y utilidades reutilizables (validaciones, formateadores, etc.) |
+|-----------------------------------------------------------------------------------------------------|
 ```
 
 ---
 
 ## 🛠️ Próximas mejoras
 
-| Herramienta               | Badge                                                                                                     | Descripción                                                                                     |
-|---------------------------|-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                        | - ✅ Hooks de git automáticos.                                                                  |
-| Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                          | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits.    |
-| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git)        | - ✅ **Commit Linting**.                                                                        |
-| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)          | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                            |
-| Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                                     | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.         |
-| Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                                   | - ✅ Tests unitarios.                                                                           |
+| Herramienta               | Badge                                                                                                | Descripción                                                                                     |
+|---------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                   | - ✅ Hooks de git automáticos.                                                                  |
+| Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                     | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits.    |
+| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git)   | - ✅ **Commit Linting**.                                                                        |
+| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)     | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                            |
+| Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                                | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.         |
+| Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                              | - ✅ Tests unitarios.                                                                           |
+| Typescript                | ![typescript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript)                  | - ✅ Lenguaje estático basado en JavaScript para un desarrollo más seguro y mantenible.         |
 
 ---
 
