@@ -111,22 +111,23 @@ npm run lint:css    # Lint CSS con Stylelint
 ## 📂 Estructura de Carpetas
 
 ```
-| Carpeta                | Descripción
--------------------------|----------------------------------------------------------------------------
-cl.mamma-mia             | Carpeta raíz del proyecto
-├── public               | Contiene archivos estáticos como index.html, imágenes, etc.
-└── src
-    ├── assets           | Recursos estáticos como imágenes, fuentes, etc.
-    │   └── img          | Imágenes utilizadas en el proyecto.
-    ├── components       | Componentes reutilizables de la UI (botones, formularios, etc.)
-    ├── contexts         | Contextos de React para manejo de estado global.
-    ├── layouts          | Plantillas de diseño para diferentes secciones.
-    │   ├── private      | Diseño para páginas privadas (requiere autenticación).
-    │   └── public       | Diseño para páginas públicas.
-    │       └── auth     | Vistas de autenticación (login, registro, etc.).
-    ├── routes           | Definición de rutas para las diferentes páginas.
-    └── utils            | Funciones y utilidades reutilizables (validaciones, formateadores, etc.)
--------------------------|----------------------------------------------------------------------------
+|-------------------------------------------------------------------------------------------------------|
+| Carpeta                  | Descripción                                                                |
+|-------------------------------------------------------------------------------------------------------|
+| cl.mamma-mia             | Carpeta raíz del proyecto                                                  |
+| ├── public               | Contiene archivos estáticos como index.html, imágenes, etc.                |
+| └── src                  |                                                                            |
+|     ├── assets           | Recursos estáticos como imágenes, fuentes, etc.                            |
+|     │   └── img          | Imágenes utilizadas en el proyecto.                                        |
+|     ├── components       | Componentes reutilizables de la UI (botones, formularios, etc.)            |
+|     ├── contexts         | Contextos de React para manejo de estado global.                           |
+|     ├── layouts          | Plantillas de diseño para diferentes secciones.                            |
+|     │   ├── private      | Diseño para páginas privadas (requiere autenticación).                     |
+|     │   └── public       | Diseño para páginas públicas.                                              |
+|     │       └── auth     | Vistas de autenticación (login, registro, etc.).                           |
+|     ├── routes           | Definición de rutas para las diferentes páginas.                           |
+|     └── utils            | Funciones y utilidades reutilizables (validaciones, formateadores, etc.)   |
+|-------------------------------------------------------------------------------------------------------|
 ```
 
 ---
