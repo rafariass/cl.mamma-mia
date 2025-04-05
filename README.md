@@ -6,6 +6,23 @@
 
 ---
 
+## 📑 Tabla de contenidos
+
+- [🍕 Mamma-Mia Pizzería](#🍕-mamma-mia-pizzería)
+  - [📑 Tabla de contenidos](#📑-tabla-de-contenidos)
+  - [🚀 Requisitos](#🚀-requisitos)
+    - [📁 Ejemplo de archivo `.env`](#📁-ejemplo-de-archivo-env)
+  - [🔧 Instalación](#🔧-instalación)
+  - [⚙️ Scripts disponibles](#⚙️-scripts-disponibles)
+  - [📦 Dependencias](#📦-dependencias)
+    - [🌍 Producción](#🌍-producción)
+    - [💻 Desarrollo](#💻-desarrollo)
+  - [📂 Estructura de Carpetas](#📂-estructura-de-carpetas)
+  - [🛠️ Próximas mejoras](#🛠️-próximas-mejoras)
+  - [📄 Licencia](#📄-licencia)
+
+---
+
 ## 🚀 Requisitos
 
 - ![node](https://img.shields.io/badge/node-18.16.0-339933?logo=node.js)
@@ -19,6 +36,40 @@ VITE_URL_API=https://mi-backend.com/api
 
 > Asegúrate de que este archivo esté en la raíz del proyecto y que no se suba al repositorio (agregado en `.gitignore`).
 
+---
+
+## 🔧 Instalación
+
+1. Clona el repositorio con el método que prefieras:
+
+   **HTTPS:**
+   ```bash
+   git clone https://github.com/rafariass/cl.mamma-mia.git
+   ```
+   **SSH:**
+   ```bash
+   git clone git@github.com:rafariass/cl.mamma-mia.git
+   ```
+
+   **GitHub CLI:**
+   ```bash
+   gh repo clone rafariass/cl.mamma-mia
+    ```
+
+2. Instala las dependencias, con tu gestor de paquetes favorito:
+
+   **NPM**
+   ```bash
+   npm i
+   ```
+   **PNPM**
+   ```bash
+   pnpm i
+   ```
+   **YARN**
+   ```bash
+   yarn
+   ```
 
 ---
 
@@ -36,7 +87,7 @@ npm run lint:css    # Lint CSS con Stylelint
 
 ## 📦 Dependencias
 
-### Producción
+### 🌍 Producción
 
 | Paquete              | Versión   | Badge                                                                 |
 |----------------------|-----------|------------------------------------------------------------------------|
@@ -47,7 +98,7 @@ npm run lint:css    # Lint CSS con Stylelint
 | React Router DOM     | `6.30.0`  | ![react-router](https://img.shields.io/badge/react--router--dom-6.30.0-CA4245?logo=react-router) |
 | SweetAlert2          | `11.17.2` | ![sweetalert2](https://img.shields.io/badge/sweetalert2-11.17.2-F27474?logo=sweetalert2) |
 
-### Desarrollo
+### 💻 Desarrollo
 
 | Paquete                   | Versión   | Badge                                                                 |
 |---------------------------|-----------|------------------------------------------------------------------------|
@@ -82,12 +133,14 @@ cl.mamma-mia             | Carpeta raíz del proyecto
 
 ## 🛠️ Próximas mejoras
 
-| Herramienta               | Badge                                                                                                     | Descripción                                                         |
-|---------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)          | - ✅ Simular respuestas del backend durante el desarrollo y pruebas |
-| Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                        | - ✅ Hooks de git automáticos                                       |
-| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git)        | - ✅ **Commit linting**                                             |
-| Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                                   | - ✅ Tests unitarios                                                |
+| Herramienta               | Badge                                                                                                     | Descripción                                                                                     |
+|---------------------------|-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                        | - ✅ Hooks de git automáticos.                                                                  |
+| Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                          | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits.    |
+| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git)        | - ✅ **Commit Linting**.                                                                        |
+| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)          | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                            |
+| Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                                     | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.         |
+| Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                                   | - ✅ Tests unitarios.                                                                           |
 
 ---
 
