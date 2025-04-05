@@ -18,6 +18,7 @@
     - [🌍 Producción](#🌍-producción)
     - [💻 Desarrollo](#💻-desarrollo)
   - [📂 Estructura de Carpetas](#📂-estructura-de-carpetas)
+  - [🆕 Nuevo (2025-04-05)](#🆕-nuevo-2025-04-05)
   - [🛠️ Próximas mejoras](#🛠️-próximas-mejoras)
   - [📄 Licencia](#📄-licencia)
 
@@ -81,6 +82,7 @@ npm run build       # Compila el proyecto para producción
 npm run lint        # Ejecuta linter JS y CSS
 npm run lint:js     # Lint JS con StandardJS
 npm run lint:css    # Lint CSS con Stylelint
+npm run prepare     # Inicializa Husky (Git Hooks)
 ```
 
 ---
@@ -100,11 +102,13 @@ npm run lint:css    # Lint CSS con Stylelint
 
 ### 💻 Desarrollo
 
-| Paquete                   | Versión   | Badge                                                                 |
+| Paquete                   | Versión   | Badge                                                                  |
 |---------------------------|-----------|------------------------------------------------------------------------|
 | StandardJS                | `17.1.2`  | ![standard](https://img.shields.io/badge/standard-17.1.2-F3DF49?logo=javascript) |
 | Stylelint                 | `16.17.0` | ![stylelint](https://img.shields.io/badge/stylelint-16.17.0-263238?logo=stylelint) |
-| Stylelint Config Standard| `37.0.0`  | ![stylelint-config](https://img.shields.io/badge/stylelint--config--standard-37.0.0-263238?logo=stylelint) |
+| Stylelint Config Standard | `37.0.0`  | ![stylelint-config](https://img.shields.io/badge/stylelint--config--standard-37.0.0-263238?logo=stylelint) |
+| Husky                     | `9.1.7`   | ![husky](https://img.shields.io/badge/husky-9.1.7-263238?style=flat) |
+| Lint-Staged               | `15.5.0`  | ![lint-staged](https://img.shields.io/badge/lint--staged-15.5.0-263238?style=flat) |
 
 ---
 
@@ -132,17 +136,32 @@ npm run lint:css    # Lint CSS con Stylelint
 
 ---
 
+## 🆕 Nuevo (2025-04-05)
+
+Este proyecto cuenta con la integración de **Husky** y **Lint-staged** para mejorar la calidad del código al momento de realizar commits.
+
+### ⭐️ ¿Qué significa esto?
+
+Cada vez que ejecutás `git commit`, se activan automáticamente una serie de validaciones sobre los archivos modificados (staged):
+
+- ✅ Se ejecuta el comando `npm run lint` solo sobre los archivos modificados (`*.js`, `*.jsx`, `*.ts`, `*.tsx`, `*.css`).
+- ❌ Si hay errores de linting, el commit se cancela para que puedan ser corregidos antes de integrarlos.
+
+Esto asegura que el código que entra al repositorio cumple con los estándares definidos.
+
+---
+
 ## 🛠️ Próximas mejoras
 
-| Herramienta               | Badge                                                                                                | Descripción                                                                                     |
-|---------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                   | - ✅ Hooks de git automáticos.                                                                  |
-| Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                     | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits.    |
-| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git)   | - ✅ **Commit Linting**.                                                                        |
-| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)     | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                            |
-| Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                                | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.         |
-| Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                              | - ✅ Tests unitarios.                                                                           |
-| Typescript                | ![typescript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript)                  | - ✅ Lenguaje estático basado en JavaScript para un desarrollo más seguro y mantenible.         |
+| Herramienta               | Badge                                                                                              | Descripción                                                                                  | Status                                                            |
+|---------------------------|----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                 | - ✅ Hooks de git automáticos.                                                               | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
+| Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                   | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits. | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
+| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git) | - ✅ **Commit Linting**.                                                                     | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
+| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)   | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                         | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
+| Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                              | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.      | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
+| Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                            | - ✅ Tests unitarios.                                                                        | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
+| Typescript                | ![typescript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript)                | - ✅ Lenguaje estático basado en JavaScript para un desarrollo más seguro y mantenible.      | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 
 ---
 
