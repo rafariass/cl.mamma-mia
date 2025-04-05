@@ -1,0 +1,221 @@
+@import url('bootstrap/dist/css/bootstrap.css');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@900&display=swap');
+
+#root {
+  display: grid;
+  grid-template-areas:
+    "area-menu"
+    "area-work"
+    "area-footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.area-menu {
+  grid-area: area-menu;
+}
+
+.area-work {
+  grid-area: area-work;
+}
+
+.area-footer {
+  grid-area: area-footer;
+}
+
+.bg-common {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-login {
+  background-image:
+    linear-gradient(
+      oklch(100% 0 0deg / 25%),
+      oklch(100% 0 0deg / 25%)
+    ),
+    url('./assets/img/login.avif');
+}
+
+.bg-register {
+  background-image:
+    linear-gradient(
+      oklch(100% 0 0deg / 25%),
+      oklch(100% 0 0deg / 25%)
+    ),
+    url('./assets/img/register.avif');
+}
+
+.bg-profile {
+  background-image:
+    linear-gradient(
+      oklch(0% 0 0deg / 25%),
+      oklch(0% 0 0deg / 25%)
+    ),
+    url('./assets/img/profile.avif');
+}
+
+.bg-not-found {
+  background-image:
+    linear-gradient(
+      oklch(0% 0 0deg / 25%),
+      oklch(0% 0 0deg / 25%)
+    ),
+    url('./assets/img/not_found.avif');
+}
+
+.bg-product {
+  background-image:
+    linear-gradient(
+      oklch(0% 0 0deg / 25%),
+      oklch(0% 0 0deg / 25%)
+    ),
+    url('./assets/img/product.avif');
+}
+
+.bg-cart {
+  background-image:
+    linear-gradient(
+      oklch(0% 0 0deg / 25%),
+      oklch(0% 0 0deg / 25%)
+    ),
+    url('./assets/img/cart.avif');
+}
+
+.bg-banner {
+  background-image:
+    linear-gradient(
+      oklch(100% 0 0deg / 75%),
+      oklch(100% 0 0deg / 75%)
+    );
+}
+
+.bg-card {
+  background-image:
+    linear-gradient(
+      oklch(0% 0 0deg / 25%),
+      oklch(0% 0 0deg / 25%)
+    ),
+    url('./assets/img/loading.gif');
+}
+
+.profile-section {
+  width: auto;
+}
+
+.hero-section {
+  width: 100%;
+  height: 450px;
+  color: #fff;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 75px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  hr {
+    border: 2.5px solid #fff;
+    width: 50%;
+  }
+}
+
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  );
+  gap: 25px;
+}
+
+.f-pizza {
+  font-family: Caveat, cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card {
+  overflow: hidden;
+
+  .pizza-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transition: .5s;
+  }
+
+  .card-footer {
+    background-color: unset !important;
+  }
+
+  .card-title {
+    text-transform: capitalize;
+    font-size: 40px;
+  }
+
+  .card-price {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .card-btns {
+    display: flex;
+    gap: 25px;
+
+    button {
+      display: block;
+      padding: 8px 25px;
+    }
+  }
+
+  &:hover {
+    .pizza-img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.icon-list {
+  width: 24px;
+  height: 24px;
+}
+
+.back-icon:hover {
+  animation: pulse 0.8s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(2); }
+  100% { transform: scale(1); }
+}
+
+.f-not-found {
+  font-family: 'Passion One', cursive;
+}
+
+@media (width >= 768px) {
+  .profile-section {
+    width: 400px;
+  }
+}
