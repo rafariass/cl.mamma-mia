@@ -115,6 +115,7 @@ npm run prepare     # Inicializa Husky (Git Hooks)
 | Lint-Staged                     | `15.5.0`  | ![lint-staged](https://img.shields.io/badge/lint--staged-15.5.0-263238?style=flat) |
 | @commitlint/cli                 | `19.8.0`  | ![commitlint-cli](https://img.shields.io/badge/@commitlint/cli-19.8.0-000000?logo=commitlint)     |
 | @commitlint/config-conventional | `19.8.0`  | ![commitlint-config](https://img.shields.io/badge/@commitlint/config--conventional-19.8.0-FE5196?logo=conventionalcommits) |
+| MSW                             | `2.7.3`   | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker) |
 
 ---
 
