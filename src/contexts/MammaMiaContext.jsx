@@ -2,6 +2,7 @@ import { createContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { formatMoney, sweetAlert2 } from '../utils'
+import { ENDPOINTS } from '../config/constants'
 
 export const MammaMiaContext = createContext()
 
@@ -63,7 +64,7 @@ export const MammaMiaProvider = ({ children }) => {
     }
 
     try {
-      const { data: response } = await axios.post(`${import.meta.env.VITE_URL_API}/api/checkouts`, cart, {
+      const { data: response } = await axios.post(ENDPOINTS.CHECKOUTS, cart, {
         headers: {
           Authorization: `Bearer ${user.token}`,
           'Content-Type': 'application/json'
@@ -97,9 +98,9 @@ export const MammaMiaProvider = ({ children }) => {
     navigate('/products')
   }
 
-  const getAuth = async (path, payload) => {
+  const getAuth = async (url, payload) => {
     try {
-      const { data: user } = await axios.post(`${import.meta.env.VITE_URL_API}${path}`, payload)
+      const { data: user } = await axios.post(url, payload)
       const pizzasProduct = await getProducts(user)
       setUser(user)
       setPizzas(pizzasProduct)
@@ -116,7 +117,7 @@ export const MammaMiaProvider = ({ children }) => {
 
   const getProfile = async () => {
     try {
-      const { data: profile } = await axios.get(`${import.meta.env.VITE_URL_API}/api/auth/me`, {
+      const { data: profile } = await axios.get(ENDPOINTS.ME, {
         headers: {
           Authorization: `Bearer ${user.token}`,
           'Content-Type': 'application/json'
@@ -135,7 +136,7 @@ export const MammaMiaProvider = ({ children }) => {
 
   const getProducts = async (user) => {
     try {
-      const { data: products } = await axios.get(`${import.meta.env.VITE_URL_API}/api/pizzas`, {
+      const { data: products } = await axios.get(ENDPOINTS.PRODUCTS, {
         headers: {
           Authorization: `Bearer ${user.token}`,
           'Content-Type': 'application/json'
@@ -154,7 +155,7 @@ export const MammaMiaProvider = ({ children }) => {
 
   const getProduct = async (id) => {
     try {
-      const { data: product } = await axios.get(`${import.meta.env.VITE_URL_API}/api/pizzas/${id}`, {
+      const { data: product } = await axios.get(`${ENDPOINTS.PRODUCTS}/${id}`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
           'Content-Type': 'application/json'
@@ -171,9 +172,9 @@ export const MammaMiaProvider = ({ children }) => {
     }
   }
 
-  const registerUser = (user) => getAuth('/api/auth/register', user)
+  const registerUser = (user) => getAuth(ENDPOINTS.REGISTER, user)
 
-  const logIn = (user) => getAuth('/api/auth/login', user)
+  const logIn = (user) => getAuth(ENDPOINTS.LOGIN, user)
 
   const logOut = () => {
     window.sessionStorage.removeItem('MammaMiaPizzeria')

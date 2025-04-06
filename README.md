@@ -18,9 +18,11 @@
     - [🌍 Producción](#🌍-producción)
     - [💻 Desarrollo](#💻-desarrollo)
   - [📂 Estructura de Carpetas](#📂-estructura-de-carpetas)
-  - [🆕 Nuevo (2025-04-05)](#🆕-nuevo-2025-04-05)
-  - [🆕 Nuevo (2025-04-06)](#🆕-nuevo-2025-04-06)
-  - [🆕 Nuevo (2025-04-07)](#🆕-nuevo-2025-04-07)
+  - [📋 Changelog](#📋-changelog)
+    - [🧩 v1.0.1](#🧩-v1-0-1)
+    - [🧩 v1.0.2](#🧩-v1.0.2)
+    - [🧩 v1.0.3](#🧩-v1.0.3)
+    - [🧩 v1.0.4](#🧩-v1.0.4)
   - [🛠️ Próximas mejoras](#🛠️-próximas-mejoras)
   - [📄 Licencia](#📄-licencia)
 
@@ -119,32 +121,43 @@ npm run prepare     # Inicializa Husky (Git Hooks)
 ## 📂 Estructura de Carpetas
 
 ```
-|-----------------------------------------------------------------------------------------------------|
-| Carpeta                  | Descripción                                                              |
-|-----------------------------------------------------------------------------------------------------|
-| cl.mamma-mia             | Carpeta raíz del proyecto                                                |
-| ├── public               | Contiene archivos estáticos como index.html, imágenes, etc.              |
-| └── src                  |                                                                          |
-|     ├── assets           | Recursos estáticos como imágenes, fuentes, etc.                          |
-|     │   └── img          | Imágenes utilizadas en el proyecto.                                      |
-|     ├── components       | Componentes reutilizables de la UI (botones, formularios, etc.)          |
-|     ├── contexts         | Contextos de React para manejo de estado global.                         |
-|     ├── layouts          | Plantillas de diseño para diferentes secciones.                          |
-|     │   ├── private      | Diseño para páginas privadas (requiere autenticación).                   |
-|     │   └── public       | Diseño para páginas públicas.                                            |
-|     │       └── auth     | Vistas de autenticación (login, registro, etc.).                         |
-|     ├── routes           | Definición de rutas para las diferentes páginas.                         |
-|     └── utils            | Funciones y utilidades reutilizables (validaciones, formateadores, etc.) |
-|-----------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------|
+| Carpeta                     | Descripción                                                              |
+|--------------------------------------------------------------------------------------------------------|
+| cl.mamma-mia                | Carpeta raíz del proyecto                                                |
+| ├── __mocks__               | Mocks para pruebas y desarrollo local.                                   |
+| │   ├── api                 | Mocks que simulan las respuestas de la API.                              |
+| │   │   ├── data            | Datos de ejemplo utilizados por los handlers mock.                       |
+| │   │   └── mamma-mia       | Handlers organizados según dominios funcionales del proyecto.            |
+| │   │       ├── auth        | Handlers relacionados con autenticación del proyecto.                    |
+| │   │       ├── checkouts   | Handlers relacionados con procesos de pago.                              |
+| │   │       └── products    | Handlers para productos (listado, detalle, etc.)                         |
+| │   └── assets              | Archivos estáticos de soporte para los mocks (imágenes, logos, etc.)     |
+| ├── public                  | Contiene archivos estáticos como index.html, imágenes, etc.              |
+| └── src                     |                                                                          |
+|     ├── assets              | Recursos estáticos como imágenes, fuentes, etc.                          |
+|     │   └── img             | Imágenes utilizadas en el proyecto.                                      |
+|     ├── components          | Componentes reutilizables de la UI (botones, formularios, etc.)          |
+|     ├── config              | Archivos de configuración del proyecto.                                  |
+|     ├── contexts            | Contextos de React para manejo de estado global.                         |
+|     ├── layouts             | Plantillas de diseño para diferentes secciones.                          |
+|     │   ├── private         | Diseño para páginas privadas (requiere autenticación).                   |
+|     │   └── public          | Diseño para páginas públicas.                                            |
+|     │       └── auth        | Vistas de autenticación (login, registro, etc.).                         |
+|     ├── routes              | Definición de rutas para las diferentes páginas.                         |
+|     └── utils               | Funciones y utilidades reutilizables (validaciones, formateadores, etc.) |
+|--------------------------------------------------------------------------------------------------------|
 ```
 
 ---
 
-## 🆕 Nuevo (2025-04-05)
+## 📋 Changelog
+
+### 🧩 v1.0.1
 
 Este proyecto cuenta con la integración de **Husky** y **Lint-staged** para mejorar la calidad del código al momento de realizar commits.
 
-### ⭐️ ¿Qué significa esto?
+#### ⭐️ ¿Qué significa esto?
 
 Cada vez que ejecutás `git commit`, se activan automáticamente una serie de validaciones sobre los archivos modificados (staged):
 
@@ -155,11 +168,11 @@ Esto asegura que el código que entra al repositorio cumple con los estándares 
 
 ---
 
-## 🆕 Nuevo (2025-04-06)
+### 🧩 v1.0.2
 
 Este proyecto ahora utiliza **Conventional Commits** para estandarizar los mensajes de commit y facilitar el seguimiento de cambios.
 
-### ⭐️ ¿Qué significa esto?
+#### ⭐️ ¿Qué significa esto?
 
 Cada vez que se realiza un commit, se valida automáticamente que el mensaje siga el formato **Conventional Commits** mediante el uso de **Commitlint**.
 
@@ -185,11 +198,11 @@ Para conocer más sobre el uso y configuración de Commitlint, puedes visitar:
 
 ---
 
-## 🆕 Nuevo (2025-04-07)
+### 🧩 v1.0.3
 
 Se implementó **Lazy Load** (carga diferida) en las rutas del proyecto usando `React.lazy` y `Suspense`.
 
-### ⭐️ ¿Qué significa esto?
+#### ⭐️ ¿Qué significa esto?
 
 Esta técnica permite que los componentes se carguen solo cuando son requeridos (por ejemplo, al navegar a una ruta específica), lo cual mejora significativamente el tiempo de carga inicial de la aplicación.
 
@@ -201,6 +214,24 @@ Esta técnica permite que los componentes se carguen solo cuando son requeridos 
 
 ---
 
+### 🧩 v1.0.4
+
+Se agregó **MSW (Mock Service Worker)** para simular APIs en el navegador durante el desarrollo.
+
+#### ⭐️ ¿Qué significa esto?
+
+Ahora el proyecto puede interceptar y simular llamadas HTTP en el navegador sin necesidad de tener un backend en funcionamiento. Esto permite:
+
+- ✅ Probar funcionalidades frontend de forma aislada.
+- ✅ Evitar dependencias externas durante el desarrollo.
+- ✅ Crear escenarios personalizados (respuestas exitosas, errores, etc.).
+
+#### 🧪 ¿Cómo se usa?
+
+Los mocks se activan automáticamente en modo desarrollo (`process.env.NODE_ENV` en `development`), y los handlers están definidos en la carpeta `__mocks__`, para mas detalles consultar [📂 Estructura de Carpetas](#📂-estructura-de-carpetas)
+
+---
+
 ## 🛠️ Próximas mejoras
 
 | Herramienta               | Badge                                                                                              | Descripción                                                                                  | Status                                                            |
@@ -209,7 +240,7 @@ Esta técnica permite que los componentes se carguen solo cuando son requeridos 
 | Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                   | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits. | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git) | - ✅ **Commit Linting**.                                                                     | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                              | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.      | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
-| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)   | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                         | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
+| MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)   | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                         | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                            | - ✅ Tests unitarios.                                                                        | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 | Typescript                | ![typescript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript)                | - ✅ Lenguaje estático basado en JavaScript para un desarrollo más seguro y mantenible.      | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 
