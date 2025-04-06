@@ -19,6 +19,7 @@
     - [💻 Desarrollo](#💻-desarrollo)
   - [📂 Estructura de Carpetas](#📂-estructura-de-carpetas)
   - [🆕 Nuevo (2025-04-05)](#🆕-nuevo-2025-04-05)
+  - [🆕 Nuevo (2025-04-06)](#🆕-nuevo-2025-04-06)
   - [🛠️ Próximas mejoras](#🛠️-próximas-mejoras)
   - [📄 Licencia](#📄-licencia)
 
@@ -102,13 +103,15 @@ npm run prepare     # Inicializa Husky (Git Hooks)
 
 ### 💻 Desarrollo
 
-| Paquete                   | Versión   | Badge                                                                  |
-|---------------------------|-----------|------------------------------------------------------------------------|
-| StandardJS                | `17.1.2`  | ![standard](https://img.shields.io/badge/standard-17.1.2-F3DF49?logo=javascript) |
-| Stylelint                 | `16.17.0` | ![stylelint](https://img.shields.io/badge/stylelint-16.17.0-263238?logo=stylelint) |
-| Stylelint Config Standard | `37.0.0`  | ![stylelint-config](https://img.shields.io/badge/stylelint--config--standard-37.0.0-263238?logo=stylelint) |
-| Husky                     | `9.1.7`   | ![husky](https://img.shields.io/badge/husky-9.1.7-263238?style=flat) |
-| Lint-Staged               | `15.5.0`  | ![lint-staged](https://img.shields.io/badge/lint--staged-15.5.0-263238?style=flat) |
+| Paquete                         | Versión   | Badge                                                                  |
+|---------------------------------|-----------|------------------------------------------------------------------------|
+| StandardJS                      | `17.1.2`  | ![standard](https://img.shields.io/badge/standard-17.1.2-F3DF49?logo=javascript) |
+| Stylelint                       | `16.17.0` | ![stylelint](https://img.shields.io/badge/stylelint-16.17.0-263238?logo=stylelint) |
+| Stylelint Config Standard       | `37.0.0`  | ![stylelint-config](https://img.shields.io/badge/stylelint--config--standard-37.0.0-263238?logo=stylelint) |
+| Husky                           | `9.1.7`   | ![husky](https://img.shields.io/badge/husky-9.1.7-263238?style=flat) |
+| Lint-Staged                     | `15.5.0`  | ![lint-staged](https://img.shields.io/badge/lint--staged-15.5.0-263238?style=flat) |
+| @commitlint/cli                 | `19.8.0`  | ![commitlint-cli](https://img.shields.io/badge/@commitlint/cli-19.8.0-000000?logo=commitlint)     |
+| @commitlint/config-conventional | `19.8.0`  | ![commitlint-config](https://img.shields.io/badge/@commitlint/config--conventional-19.8.0-FE5196?logo=conventionalcommits) |
 
 ---
 
@@ -151,13 +154,43 @@ Esto asegura que el código que entra al repositorio cumple con los estándares 
 
 ---
 
+## 🆕 Nuevo (2025-04-06)
+
+Este proyecto ahora utiliza **Conventional Commits** para estandarizar los mensajes de commit y facilitar el seguimiento de cambios.
+
+### ⭐️ ¿Qué significa esto?
+
+Cada vez que se realiza un commit, se valida automáticamente que el mensaje siga el formato **Conventional Commits** mediante el uso de **Commitlint**.
+
+- ✅ **Formato de mensaje de commit**: Debe seguir una estructura específica, como:
+   ```bash
+   git commit -m 'feat: add new functionality'
+   git commit -m 'fix: fix an error in the application'
+   git commit -m 'docs: update documentation'
+   ```
+
+- ❌ Si el mensaje de commit no sigue este formato, el commit será rechazado y se pedirá que se corrija antes de continuar, como:
+   ```bash
+   git commit -m 'Keep calm and commit'
+   ```
+
+> Esto ayuda a mantener un historial de commits claro y estructurado, facilitando la colaboración y el mantenimiento del proyecto.
+
+Para conocer más sobre el uso y configuración de Commitlint, puedes visitar:
+
+- 🌐 Sitio oficial: [commitlint.js.org](https://commitlint.js.org/)
+- 📦 Paquete `@commitlint/cli` en npm: [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli)
+- 📦 Paquete `@commitlint/config-conventional` en npm: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
+
+---
+
 ## 🛠️ Próximas mejoras
 
 | Herramienta               | Badge                                                                                              | Descripción                                                                                  | Status                                                            |
 |---------------------------|----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                 | - ✅ Hooks de git automáticos.                                                               | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                   | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits. | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
-| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git) | - ✅ **Commit Linting**.                                                                     | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
+| Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git) | - ✅ **Commit Linting**.                                                                     | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)   | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                         | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 | Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                              | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.      | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 | Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                            | - ✅ Tests unitarios.                                                                        | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
