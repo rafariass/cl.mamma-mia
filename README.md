@@ -20,6 +20,7 @@
   - [📂 Estructura de Carpetas](#📂-estructura-de-carpetas)
   - [🆕 Nuevo (2025-04-05)](#🆕-nuevo-2025-04-05)
   - [🆕 Nuevo (2025-04-06)](#🆕-nuevo-2025-04-06)
+  - [🆕 Nuevo (2025-04-07)](#🆕-nuevo-2025-04-07)
   - [🛠️ Próximas mejoras](#🛠️-próximas-mejoras)
   - [📄 Licencia](#📄-licencia)
 
@@ -184,6 +185,22 @@ Para conocer más sobre el uso y configuración de Commitlint, puedes visitar:
 
 ---
 
+## 🆕 Nuevo (2025-04-07)
+
+Se implementó **Lazy Load** (carga diferida) en las rutas del proyecto usando `React.lazy` y `Suspense`.
+
+### ⭐️ ¿Qué significa esto?
+
+Esta técnica permite que los componentes se carguen solo cuando son requeridos (por ejemplo, al navegar a una ruta específica), lo cual mejora significativamente el tiempo de carga inicial de la aplicación.
+
+- ✅ Reducción del tamaño del bundle inicial.
+- ✅ Mejor experiencia de usuario en dispositivos con conexiones lentas.
+- ✅ Carga progresiva de recursos, priorizando lo esencial.
+
+> Puedes ver el ejemplo de uso en la carpeta `routes`.
+
+---
+
 ## 🛠️ Próximas mejoras
 
 | Herramienta               | Badge                                                                                              | Descripción                                                                                  | Status                                                            |
@@ -191,8 +208,8 @@ Para conocer más sobre el uso y configuración de Commitlint, puedes visitar:
 | Husky                     | ![husky](https://img.shields.io/badge/husky-9.1.7-1D2F3C?logo=git)                                 | - ✅ Hooks de git automáticos.                                                               | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | Lint-Staged               | ![Lint-Staged](https://img.shields.io/badge/lint--staged-15.5.0-1D2F3C?logo=git)                   | - ✅ **Linting** solo en los archivos modificados, optimizando la eficiencia de los commits. | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | Conventional Commits      | ![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-96072b?logo=git) | - ✅ **Commit Linting**.                                                                     | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
+| Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                              | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.      | ![ok](https://img.shields.io/badge/OK-success-4CAF50)             |
 | MSW (Mock Service Worker) | ![msw](https://img.shields.io/badge/Mock%20Service%20Worker-2.7.3-FF6A33?logo=mockserviceworker)   | - ✅ Simular respuestas del backend durante el desarrollo y pruebas.                         | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
-| Lazy Load                 | ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react)                              | - ✅ Optimizar el rendimiento y mejorar los tiempos de carga de las rutas del proyecto.      | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 | Vitest                    | ![vitest](https://img.shields.io/badge/vitest-3.1.1-6E9F18?logo=vitest)                            | - ✅ Tests unitarios.                                                                        | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 | Typescript                | ![typescript](https://img.shields.io/badge/TypeScript-5.2.2-3178C6?logo=typescript)                | - ✅ Lenguaje estático basado en JavaScript para un desarrollo más seguro y mantenible.      | ![pending](https://img.shields.io/badge/Pendiente-pending-F9A825) |
 

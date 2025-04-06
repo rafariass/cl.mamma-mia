@@ -43,7 +43,7 @@ const Product = () => {
                   <ListGroup variant='flush'>
                     {pizza?.ingredients?.map((ingredient, index) => (
                       <ListGroup.Item className='border-0' key={index}>
-                        <img alt='Logo Pizza' src={pizzaLogo} className='d-inline-block align-top me-2 icon-list' />
+                        <img src={pizzaLogo} alt='Logo Pizza' className='d-inline-block align-top me-2 icon-list' />
                         {capitalize(ingredient)}
                       </ListGroup.Item>
                     ))}
