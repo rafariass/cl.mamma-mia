@@ -15,7 +15,8 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css}": "npm run lint"
+    "*.{js,jsx,ts,tsx}": "npm run lint:js",
+    "*.{css}": "npm run lint:css"
   },
   "scripts": {
     "dev": "vite",
